@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-size: 35px;
+}
+
+body{
+    background: url(images/pexels-deeana-arts-2565222.jpg) no-repeat center center fixed;
+    background-size: cover;
+    main{
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+        -webkit-transform: translate(-50%, -30%);
+        header{
+            img{
+                width: 150px;
+                height: inherit;
+                border-radius: 100%;
+                box-shadow: rgba(124, 205, 221, 0.305) 0px 0px 10px 2px ;
+            }
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h1{
+                width: 15rem;
+                text-align: center;
+                margin-top: 0.5em;
+                border: 1px solid #fff;
+                padding: 5px 12px;
+                border-radius: 40px;
+                color: rgba(4, 29, 30, 0.785);
+                background-color: rgba(255, 255, 255, 0.504);
+            }    
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            margin: 1.04em auto;
+            li{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid #fff;
+                border-radius: 30px;
+                margin: 0.3em auto;
+                width: 11rem;
+                text-align: center;
+                padding: 3px 3px;
+                background-color: rgba($color: #fff, $alpha: 0.64);
+                backdrop-filter: blur(10px) saturate(200%) contrast(150%);
+                a{
+                    color: rgba(88, 31, 7, 0.652);
+                    font-size: 1rem;
+                    text-decoration: none;
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    main{
+        overflow: none;
+        header{
+            img{
+                box-shadow: rgba(124, 205, 221, 0.305) 0px 20px 32px 10px !important;
+            }
+            h1{
+                width: 7.5rem !important;
+                font-size: 20px;
+                font-weight: 800;
+                backdrop-filter: blur(8px) saturate(230%) contrast(120%);
+                padding: .2rem 0.75rem !important;
+            }
+        }
+        ul{
+            margin: 0.3rem !important;
+            li{
+                max-width: 200px;
+                a{
+                    font-size: 20px !important;
+                }
+            }
+        }
+    }
+}
