@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -7,11 +7,29 @@
   font-family: 'Montserrat', sans-serif;
   color: #fff;
   font-size: 35px;
+  overflow: hidden !important;
 }
 
 body {
-  background: url(images/pexels-deeana-arts-2565222.jpg) no-repeat center center fixed;
-  background-size: cover;
+  overflow: hidden !important;
+}
+
+body .bg-image {
+  position: absolute;
+  z-index: -2;
+  width: 100vw;
+  height: 100vh;
+}
+
+body .bg-image img {
+  width: 110%;
+  height: 110%;
+  -webkit-transform: translate(-1%, -1%);
+          transform: translate(-1%, -1%);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
 }
 
 body main {
@@ -20,6 +38,13 @@ body main {
   left: 50%;
   transform: translate(-50%, -30%);
   -webkit-transform: translate(-50%, -30%);
+  opacity: 0;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -webkit-transition: opacity 2s ease-in-out, -webkit-filter 2s ease-in-out;
+  transition: opacity 2s ease-in-out, -webkit-filter 2s ease-in-out;
+  transition: opacity 2s ease-in-out, filter 2s ease-in-out;
+  transition: opacity 2s ease-in-out, filter 2s ease-in-out, -webkit-filter 2s ease-in-out;
 }
 
 body main header {
@@ -96,8 +121,8 @@ body main ul li {
   text-align: center;
   padding: 3px 3px;
   background-color: rgba(255, 255, 255, 0.64);
-  -webkit-backdrop-filter: blur(10px) saturate(200%) contrast(150%);
-          backdrop-filter: blur(10px) saturate(200%) contrast(150%);
+  -webkit-backdrop-filter: blur(10px) saturate(200%) contrast(150%) !important;
+          backdrop-filter: blur(10px) saturate(200%) contrast(150%) !important;
 }
 
 body main ul li a {
