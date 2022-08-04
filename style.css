@@ -101,6 +101,7 @@ body main ul {
 }
 
 body main ul li {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,15 +118,15 @@ body main ul li {
   border: 1px solid #fff;
   border-radius: 30px;
   margin: 0.3em auto;
-  width: 11rem;
+  width: 10rem;
   text-align: center;
-  padding: 3px 3px;
+  padding: 3px 1px;
   background-color: rgba(255, 255, 255, 0.64);
   -webkit-backdrop-filter: blur(10px) saturate(200%) contrast(150%) !important;
           backdrop-filter: blur(10px) saturate(200%) contrast(150%) !important;
 }
 
-body main ul li a {
+body main ul li p {
   color: rgba(88, 31, 7, 0.652);
   font-size: 1rem;
   text-decoration: none;
