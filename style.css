@@ -155,7 +155,7 @@ body main ul li p {
   main ul li {
     max-width: 200px;
   }
-  main ul li a {
+  main ul li p {
     font-size: 20px !important;
   }
 }
