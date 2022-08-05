@@ -18,27 +18,13 @@ clubHouse.addEventListener('click', function() {
 })
 
 instaGram.addEventListener('click', function() {
-    const ul = document.createElement('ul')
-    const newInstLink = [
-        {
-            text:'Self Portrait',
-            link:'https://www.instagram.com/itsdebasmita_/'
-        },
-
-        {
-            text:'Art',
-            link:'https://www.instagram.com/debasmita_draws/'
-        }
-    ];
+    let newUnList = document.createElement('ul')
+    const newInstLink = ['Self Portrait', 'Art'];
     for(let i = 0; i < newInstLink.length; i++){
         const li = document.createElement('li');
-        li.setAttribute('class', 'new-items');
-        li.innerHTML = `<p>${newInstLink[i].text}</p>`;
-        li.addEventListener('click', function () {
-            window.open(newInstLink[i].link, '_blank')
-        }, {once: true});
-        ul.appendChild(li);
+        li.innerHTML = `<p>${newInstLink[i]}</p>`
+        newUnList.appendChild(li);
     }
-    ul.setAttribute('class', 'new-list');
-    instaGram.appendChild(ul);
+    newUnList.setAttribute('class', 'new-list');
+    instaGram.appendChild(newUnList);
 }, {once: true})

@@ -114,3 +114,29 @@ body{
         }
     }
 }
+
+.new-list{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.instagram{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-element{
+    display: flex;
+    flex-direction: row;
+}
+
+.new-items{
+    width: 7.5rem;;
+}
+
+@media screen and (max-width:600px) {
+    .new-items{
+        width: 5rem;;
+    }
+}
